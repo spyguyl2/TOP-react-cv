@@ -1,18 +1,15 @@
 import "./App.css";
+import Input from "./components/Input";
 
 function App() {
   return (
     <>
       <section>
         <h1>General Information</h1>
-        <label htmlFor="firstName">First Name:</label>
-        <input type="text" name="firstName"></input>
-        <label htmlFor="lastName">Last Name:</label>
-        <input type="text" name="lastName"></input>
-        <label htmlFor="email">Email:</label>
-        <input type="email" name="email"></input>
-        <label htmlFor="phoneNumber">Phone Number:</label>
-        <input type="tel" name="phoneNumber"></input>
+        <Input text="First Name" />
+        <Input text="Last Name" />
+        <Input text="Email" type="email" />
+        <Input text="Phone Number" />
       </section>
     </>
   );
