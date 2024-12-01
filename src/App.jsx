@@ -1,5 +1,4 @@
 import "./styles/reset.css";
-import "./styles/Input.css";
 import Card from "./components/Card";
 import Input from "./components/Input";
 
