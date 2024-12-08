@@ -1,7 +1,9 @@
+import CustomInput from "../components/CustomInput.jsx";
+
 const Input = ({ text = "Change me!", type = "text" }) => (
   <>
     <label htmlFor={text}>{`${text}:`}</label>
-    <input type={type} name={text} id={text}></input>
+    <CustomInput type={type} name={text} id={text}></CustomInput>
   </>
 );
 
