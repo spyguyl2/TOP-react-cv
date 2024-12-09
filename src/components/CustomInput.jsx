@@ -5,7 +5,6 @@ const CustomInput = ({ text = "Change me!", type = "text", id }) => {
 
   return (
     <>
-      <label htmlFor={id}>{`${text}:`}</label>
       <input
         id={id}
         name={text}
