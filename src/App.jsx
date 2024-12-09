@@ -1,34 +1,37 @@
 import "./styles/reset.css";
 import Card from "./components/Card";
-import CustomInput from "./components/CustomInput";
+import LabeledInput from "./components/LabeledInput";
+import Button from "./components/Button";
 import { useState } from "react";
 
 function App() {
   return (
     <>
+      <input id="plainTest" />
+      <p id="test">test</p>
       <div id="form">
-        <button id="btn-submit">Submit</button>
+        <Button text="Submit" id="btn-submit" onClick={handleSubmit} />
         <div className="content">
           <Card title="General Info">
-            <CustomInput text="First Name" />
-            <CustomInput text="Last Name" />
-            <CustomInput text="Phone Number" type="tel" />
-            <CustomInput text="Email" type="email" />
+            <LabeledInput text="First Name" id="first-name-input" />
+            <LabeledInput text="Last Name" />
+            <LabeledInput text="Phone Number" type="tel" />
+            <LabeledInput text="Email" type="email" />
           </Card>
           <Card title="Education">
-            <CustomInput text="School Name"></CustomInput>
-            <CustomInput text="Title of Study"></CustomInput>
-            <CustomInput text="Date of Study" type="date"></CustomInput>
+            <LabeledInput text="School Name"></LabeledInput>
+            <LabeledInput text="Title of Study"></LabeledInput>
+            <LabeledInput text="Date of Study" type="date"></LabeledInput>
           </Card>
           <Card title="Practical Experience">
-            <CustomInput text="Company Name"></CustomInput>
-            <CustomInput text="Title"></CustomInput>
+            <LabeledInput text="Company Name"></LabeledInput>
+            <LabeledInput text="Title"></LabeledInput>
             <label htmlFor="responsibilities">
               Describe your responsibilities:
             </label>
             <textarea name="responsibilities" id="responsibilities"></textarea>
-            <CustomInput text="Start Date" type="date"></CustomInput>
-            <CustomInput text="End Date" type="date"></CustomInput>
+            <LabeledInput text="Start Date" type="date"></LabeledInput>
+            <LabeledInput text="End Date" type="date"></LabeledInput>
           </Card>
         </div>
       </div>
