@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-const CustomInput = ({ text = "Change me!", type = "text" }) => {
+const CustomInput = ({ text = "Change me!", type = "text", id }) => {
   const [value, setValue] = useState("");
 
   return (
     <>
-      <label htmlFor={text}>{`${text}:`}</label>
+      <label htmlFor={id}>{`${text}:`}</label>
       <input
-        id={text}
+        id={id}
         name={text}
         type={type}
         value={value}
