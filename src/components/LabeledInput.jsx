@@ -1,8 +1,9 @@
-const Input = ({ text = "Change me!", type = "text" }) => (
+import CustomInput from "./CustomInput";
+const LabeledInput = ({ text = "Change me!", type = "text", id }) => (
   <>
     <label htmlFor={text}>{`${text}:`}</label>
-    <input type={type} name={text} id={text}></input>
+    <CustomInput type={type} id={id}></CustomInput>
   </>
 );
 
-export default Input;
+export default LabeledInput;

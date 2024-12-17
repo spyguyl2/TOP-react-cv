@@ -1,34 +1,59 @@
 import "./styles/reset.css";
 import Card from "./components/Card";
-import Input from "./components/LabeledInput";
+import LabeledInput from "./components/LabeledInput";
 import { useState } from "react";
 
 function App() {
+  const [formData, setFormData] = useState({});
+
+  const handleSubmit = () => {
+    const firstName = document.getElementById("firstName").value;
+    setFormData(firstName);
+  };
+
   return (
     <>
+      <h1 id="firstNameTest">{formData}</h1>
       <div id="form">
-        <button id="btn-submit">Submit</button>
+        <button id="btn-submit" onClick={handleSubmit}>
+          Submit
+        </button>
         <div className="content">
           <Card title="General Info">
-            <Input text="First Name" />
-            <Input text="Last Name" />
-            <Input text="Phone Number" type="tel" />
-            <Input text="Email" type="email" />
+            <LabeledInput text="First Name" id="firstName" />
+            <LabeledInput text="Last Name" id="lastName" />
+            <LabeledInput text="Phone Number" type="tel" id="phoneNumber" />
+            <LabeledInput text="Email" type="email" id="email" />
           </Card>
           <Card title="Education">
-            <Input text="School Name"></Input>
-            <Input text="Title of Study"></Input>
-            <Input text="Date of Study" type="date"></Input>
+            <LabeledInput text="School Name" id="schoolName"></LabeledInput>
+            <LabeledInput
+              text="Title of Study"
+              id="titleOfStudy"
+            ></LabeledInput>
+            <LabeledInput
+              text="Date of Study"
+              type="date"
+              id="dateOfStudy"
+            ></LabeledInput>
           </Card>
           <Card title="Practical Experience">
-            <Input text="Company Name"></Input>
-            <Input text="Title"></Input>
+            <LabeledInput text="Company Name" id="companyName"></LabeledInput>
+            <LabeledInput text="Title" id="title"></LabeledInput>
             <label htmlFor="responsibilities">
               Describe your responsibilities:
             </label>
             <textarea name="responsibilities" id="responsibilities"></textarea>
-            <Input text="Start Date" type="date"></Input>
-            <Input text="End Date" type="date"></Input>
+            <LabeledInput
+              text="Start Date"
+              type="date"
+              id="startDate"
+            ></LabeledInput>
+            <LabeledInput
+              text="End Date"
+              type="date"
+              id="endDate"
+            ></LabeledInput>
           </Card>
         </div>
       </div>
