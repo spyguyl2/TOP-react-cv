@@ -1,10 +1,9 @@
-import CustomInput from "../components/CustomInput.jsx";
-
-const Input = ({ text = "Change me!", type = "text" }) => (
+import CustomInput from "./CustomInput";
+const LabeledInput = ({ text = "Change me!", type = "text", id }) => (
   <>
     <label htmlFor={text}>{`${text}:`}</label>
-    <CustomInput type={type} name={text} id={text}></CustomInput>
+    <CustomInput type={type} id={id}></CustomInput>
   </>
 );
 
-export default Input;
+export default LabeledInput;
