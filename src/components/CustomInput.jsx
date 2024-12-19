@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CustomInput = ({ type = "text", id }) => {
+const CustomInput = ({ text = "Change me!", type = "text", formData }) => {
   const [value, setValue] = useState("");
 
   return (
