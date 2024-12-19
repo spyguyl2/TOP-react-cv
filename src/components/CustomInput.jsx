@@ -1,4 +1,6 @@
-const CustomInput = ({ text = "Change me!", type = "text" }) => {
+import { useState } from "react";
+
+const CustomInput = ({ text = "Change me!", type = "text", formData }) => {
   const [value, setValue] = useState("");
 
   return (
