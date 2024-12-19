@@ -5,6 +5,7 @@ const CustomInput = ({ text = "Change me!", type = "text", formData }) => {
 
   return (
     <input
+      id={id}
       type={type}
       value={value}
       onChange={(event) => setValue(event.target.value)}
