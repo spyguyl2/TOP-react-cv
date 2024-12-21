@@ -1,9 +1,11 @@
-import CustomInput from "./CustomInput";
-
-const LabeledInput = ({ text = "Change me!", type = "text", formData }) => (
+const LabeledInput = ({
+  text = "Change me!",
+  type = "text",
+  formDataValue,
+}) => (
   <>
     <label htmlFor={text}>{`${text}:`}</label>
-    <CustomInput type={type} name={text} id={text}></CustomInput>
+    <input type={type} name={text} formDataValue />
   </>
 );
 
