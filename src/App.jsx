@@ -20,9 +20,27 @@ function App() {
     endDate: "",
   });
 
+  const handleChange = (e) => {
+    const newData = { ...formData, [e.target.name]: e.target.value };
+    setFormData(newData);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSubmitted(!isSubmitted);
+  };
+
   return (
     <>
-      {isSubmitted ? <Cv formData={formData} /> : <Form formData={formData} />}
+      {isSubmitted ? (
+        <Cv formData={formData} handleSubmit={handleSubmit} />
+      ) : (
+        <Form
+          formData={formData}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+        />
+      )}
     </>
   );
 }

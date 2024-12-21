@@ -1,11 +1,19 @@
 const LabeledInput = ({
   text = "Change me!",
   type = "text",
-  formDataValue,
+  id,
+  value,
+  handleChange,
 }) => (
   <>
-    <label htmlFor={text}>{`${text}:`}</label>
-    <input type={type} name={text} formDataValue />
+    <label htmlFor={id}>{`${text}:`}</label>
+    <input
+      type={type}
+      name={id}
+      id={id}
+      value={value}
+      onChange={handleChange}
+    />
   </>
 );
 

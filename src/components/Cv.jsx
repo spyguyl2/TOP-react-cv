@@ -1,6 +1,7 @@
-const Cv = (formData) => {
+const Cv = ({ formData, handleSubmit }) => {
   return (
     <>
+      <button onClick={handleSubmit}>Edit</button>
       <h1>
         {formData.firstName} {formData.lastName}
       </h1>
